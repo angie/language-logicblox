@@ -4,7 +4,7 @@
   "description": "Syntax highlighting for LogicBlox / LogiQL",
   "keywords": [
   ],
-  "repository": "https://github.com/angie/language-logicbloxb",
+  "repository": "https://github.com/angie/language-logicblox",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
