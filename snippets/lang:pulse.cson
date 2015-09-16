@@ -1,0 +1,4 @@
+'.source.logic':
+  'Flag a predicate as pulse':
+    'prefix': 'pulse'
+    'body': 'lang:pulse(`${1:predicateName}).$0'

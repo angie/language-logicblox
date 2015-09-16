@@ -1,0 +1,4 @@
+'.source.logic':
+  'Add a new rule':
+    'prefix': 'rule'
+    'body': '${1:head} <-\n\t${2:body}.$0'

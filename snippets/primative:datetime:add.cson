@@ -1,0 +1,4 @@
+'.source.logic':
+  'Add a number of units to a datetime':
+    'prefix': 'datetime:add'
+    'body': '${1:sum} = datetime:add[${2:inputDatetime}, ${3:integer_to_add}, "${4:days}"]$0'

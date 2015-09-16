@@ -1,0 +1,4 @@
+'.source.logic':
+  'Create a new block using module syntax':
+    'prefix': 'block'
+    'body': 'block(`${1:blockname}) {\n\n\texport(`{$2\n\t}),\n\n\tclauses(`{$3\n\t})\n\n} <-- .'

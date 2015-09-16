@@ -1,0 +1,4 @@
+'.source.logic':
+  'Format a datetime':
+    'prefix': 'datetime:format'
+    'body': 'datetime:format[${1:datetime}, ${2:"%Y-%m-%d %H:%M:%S%Q"}]$0'

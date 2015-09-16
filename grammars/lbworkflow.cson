@@ -1,0 +1,181 @@
+fileTypes: [
+  "wf"
+]
+name: "lb-workflow"
+patterns: [
+  {
+    begin: "/\\*"
+    comment: "A block comment."
+    end: "\\*/"
+    name: "comment.block"
+  }
+  {
+    comment: "A single line comment."
+    match: "//.*"
+    name: "comment.single"
+  }
+  {
+    captures:
+      "1":
+        name: "keyword"
+    comment: "Language keywords"
+    match: "((^|\\s)import\\s|(^|\\s)synchronizer\\s|(^|\\s)task\\s|(^|\\s)workflow\\s|(^|\\s)main\\s|extends\\s)"
+  }
+  {
+    comment: "Restartable composition"
+    match: "\\srestartable\\s"
+    name: "keyword"
+  }
+  {
+    captures:
+      "1":
+        name: "keyword"
+      "2":
+        name: "keyword"
+    comment: "Restartable composition with cleanup"
+    match: "\\s*\\}\\s*(with)\\s*(cleanup)\\s*\\{"
+  }
+  {
+    comment: "Sequential composition"
+    match: ";"
+    name: "keyword"
+  }
+  {
+    comment: "Parallel composition"
+    match: "\\|\\|"
+    name: "keyword"
+  }
+  {
+    captures:
+      "1":
+        name: "keyword"
+      "2":
+        name: "keyword"
+    comment: "Forall composition"
+    match: "(forall)\\s*\\(\\s*[a-zA-Z0-9_]+\\s*(in)"
+  }
+  {
+    captures:
+      "1":
+        name: "keyword"
+      "2":
+        name: "variable.parameter"
+      "3":
+        name: "keyword"
+    comment: "Forall composition with max setting"
+    match: "(forall)\\s*<\\s*(max)\\s*=\\s*[a-zA-Z0-9_]+\\s*>\\(\\s*[a-zA-Z0-9_]+\\s*(in)"
+  }
+  {
+    begin: "\""
+    comment: "Strings"
+    end: "\""
+    name: "string"
+    patterns: [
+      {
+        comment: "Variable reference in string template"
+        match: "\\$\\([a-zA-Z0-9_]+\\)"
+        name: "variable.parameter"
+      }
+      {
+        comment: "Predicate literal in string template"
+        match: "\\$\\(`[a-zA-Z0-9_:]+\\)"
+        name: "entity.name.function"
+      }
+      {
+        comment: "Escaping in string template"
+        match: "\\\\."
+        name: "constant.other"
+      }
+      {
+        comment: "A $ is not allowed in strings"
+        match: "\\$"
+        name: "invalid"
+      }
+    ]
+  }
+  {
+    comment: "Variable reference"
+    match: "\\$[a-zA-Z0-9_]+"
+    name: "variable.parameter"
+  }
+  {
+    comment: "Predicate literal"
+    match: "`[a-zA-Z0-9_:]+"
+    name: "entity.name.function"
+  }
+  {
+    comment: "Boolean values."
+    match: "\\b(true|false)\\b"
+    name: "constant.language"
+  }
+  {
+    comment: "Output binding"
+    match: "<~"
+    name: "keyword.other"
+  }
+  {
+    comment: "An integer constant."
+    match: "\\b\\d+"
+    name: "constant.numeric"
+  }
+  {
+    comment: "Separator"
+    match: ","
+    name: "keyword.other"
+  }
+  {
+    comment: "Decorators"
+    match: "\\?|\\*"
+    name: "keyword.other"
+  }
+  {
+    comment: "Instance variable container"
+    match: "\\[|\\]"
+    name: "keyword.other"
+  }
+  {
+    captures:
+      "1":
+        name: "keyword.other"
+      "2":
+        name: "storage.type"
+    comment: "Parameter type declaration"
+    match: "(:)\\s*([a-zA-Z0-9_]+)"
+  }
+  {
+    comment: "All task processes under the lb namespace."
+    match: "\\b(lb.[\\w.]*)|BaseTask"
+    name: "support.function"
+  }
+  {
+    captures:
+      "1":
+        name: "keyword.other"
+      "2":
+        name: "entity.name.function"
+      "3":
+        name: "keyword.other"
+      "4":
+        name: "keyword.other"
+      "5":
+        name: "storage.type"
+      "6":
+        name: "keyword.other"
+    comment: "State machine decorated transition"
+    match: "(\\.)([a-zA-Z0-9_]+)(:)(!?)([a-zA-Z0-9_]+)\\s*(->)"
+  }
+  {
+    captures:
+      "1":
+        name: "keyword.other"
+      "2":
+        name: "keyword.other"
+      "3":
+        name: "storage.type"
+      "4":
+        name: "keyword.other"
+    comment: "State machine non-decorated transition"
+    match: "(\\.)(!?)([a-zA-Z0-9_]+)\\s*(->)"
+  }
+]
+scopeName: "source.wf"

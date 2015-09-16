@@ -1,0 +1,4 @@
+'.source.logic':
+  'primative datetime':
+    'prefix': 'datetime'
+    'body': 'datetime$0'

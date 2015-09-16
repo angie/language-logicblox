@@ -1,0 +1,4 @@
+'.source.logic':
+  'Flag a block as Transaction Lifetime':
+    'prefix': 'transactionLifetime'
+    'body': 'lang:block:predicateLifetime[]="TransactionLifetime".$0'

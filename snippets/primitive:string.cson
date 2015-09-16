@@ -1,0 +1,4 @@
+'.source.logic':
+  'primative string':
+    'prefix': 'string'
+    'body': 'string$0'

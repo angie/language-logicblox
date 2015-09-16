@@ -1,0 +1,120 @@
+"name": "LogicBlox",
+"scopeName": "source.logic",
+"fileTypes": ["logic"],
+"patterns": [{
+  "begin": "\/\\*",
+  "end": "\\*\/",
+  "name": "comment.block",
+  "comment": "A block comment."
+  },{
+    "match": "\/\/.*",
+    "name": "comment.single",
+    "comment": "A single line comment."
+  },{
+    "match": "\\d+",
+    "name": "constant.numeric",
+    "comment": "An integer constant."
+  },{
+    "match": "\\d+(.\\d+){,1}[eE][+-]{,1}\\d+",
+    "name": "constant.numeric",
+    "comment": "Real numbers."
+  },{
+    "begin": "\"",
+    "end": "\"",
+    "name": "string",
+    "comment": "Strings"
+  },{
+    "match": "\\b(true|false)\\b",
+    "name": "constant.language",
+    "comment": "Boolean values."
+  },{
+    "match": "`[a-zA-Z_:]+(\\d|\\a)*\\b",
+    "name": "entity.name.type.logicblox",
+    "comment": "LogicBlox Symbol"
+  },{
+    "match": "->",
+    "name": "keyword.other",
+    "comment": "Constraint"
+  },{
+    "match": "-->",
+    "name": "keyword.other",
+    "comment": "Level 1 Constraint"
+  },{
+    "match": "<-",
+    "name": "keyword.other",
+    "comment": "Rule"
+  },{
+    "match": "<--",
+    "name": "keyword.other",
+    "comment": "Level 1 Rule"
+  },{
+    "match": "\\.",
+    "name": "keyword.other",
+    "comment": "Terminator"
+  },{
+    "match": "!",
+    "name": "keyword.other",
+    "comment": "Negation"
+  },{
+    "match": ",",
+    "name": "keyword.other",
+    "comment": "Conjunction"
+  },{
+    "match": ";",
+    "name": "keyword.other",
+    "comment": "Disjunction"
+  },{
+    "match": "<=|>=|!=|<|>",
+    "name": "keyword.operator",
+    "comment": "Equality"
+  },{
+    "match": "@",
+    "name": "keyword.other",
+    "comment": "Equality"
+  },{
+    "match": "\\+|-|\\*|/",
+    "name": "keyword.operator",
+    "comment": "Arithmetic operations"
+  },{
+    "match": "::",
+    "name": "keyword",
+    "comment": "Colon colon"
+  },{
+    "begin": "\\b(agg\\s*<<)",
+    "beginCaptures": {
+      "1": {
+        "name": "support.function"
+      }
+    },
+    "end": "(>>)",
+    "endCaptures": {
+      "1": {
+        "name": "support.function"
+      }
+    },
+    "patterns": [{
+      "include": "$self"
+    }],
+    "comment": "Aggregations"
+  },{
+    "match": "\\b(lang:[\\w:]*)",
+    "name": "storage.modifier",
+    "comment": "All the lang system predicates"
+  },{
+    "match": "(export|sealed|clauses|block|alias)\\s*\\((?=`)",
+    "captures": {
+      "1": {
+        "name": "storage.type"
+      }
+    },
+    "comment": "Module keywords"
+  },{
+    "match": "[a-zA-Z_][a-zA-Z_0-9:]*(@prev|@init|@final)?(?=(\\(|\\[))",
+    "name": "entity.name",
+    "comment": "A predicate name."
+  },{
+    "match": "([a-zA-Z][a-zA-Z_0-9]*|_)\\s*(?=(,|\\.|<-|->|\\)|\\]|=))",
+    "name": "variable.parameter",
+    "comment": "A variable to a functional predicate."
+  }],
+"uuid": "59bf5022-e261-453f-b1cb-9f9fa0712413"

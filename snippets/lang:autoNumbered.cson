@@ -1,0 +1,4 @@
+'.source.logic':
+  'Flag a predicate as auto numbered':
+    'prefix': 'autoNumbered'
+    'body': 'lang:autoNumbered(`${1:predicateName}).$0'

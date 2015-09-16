@@ -1,0 +1,4 @@
+'.source.logic':
+  'type conversion buildin TO:FROM:convert':
+    'prefix': 'convert'
+    'body': 'convert[${1:from}] = ${2:to},$0'

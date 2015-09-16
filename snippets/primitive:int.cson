@@ -1,0 +1,4 @@
+'.source.logic':
+  'primative integer':
+    'prefix': 'int'
+    'body': 'int$0'

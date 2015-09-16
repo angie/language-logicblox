@@ -1,0 +1,4 @@
+'.source.logic':
+  'Add a new runtotal series.':
+    'prefix': 'runtotal'
+    'body': '${1:head}[${2:a, ordered}] = runtotal <-\n\tseries<< runtotal = runtotal[${3:ordered}](v) >>\n\t${4:body[a, ordered] = v}.$0'

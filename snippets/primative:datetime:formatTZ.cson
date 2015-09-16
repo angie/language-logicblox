@@ -1,0 +1,4 @@
+'.source.logic':
+  'Format a datetime using a timezone':
+    'prefix': 'datetime:formatTZ'
+    'body': 'datetime:formatTZ[${1:datetime}, ${2:"%Y-%m-%d %H:%M:%S%Q"}, ${3:timezone}]$0'

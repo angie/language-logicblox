@@ -1,0 +1,4 @@
+'.source.logic':
+  'primative float':
+    'prefix': 'float'
+    'body': 'float$0'

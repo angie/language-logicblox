@@ -1,0 +1,4 @@
+'.source.logic':
+  'Add a functional predicate (arity 2)':
+    'prefix': 'func2'
+    'body': '${1:functional}[${2:a}, ${3:b}] = ${4:v} -> ${5:A}(${2:a}), ${6:B}(${3:b}), ${7:valueType}(${4:v}).$0'

@@ -1,0 +1,4 @@
+'.source.logic':
+  'Parse a datetime string':
+    'prefix': 'datetime:parse'
+    'body': 'datetime:parse[${1:datetime_string}, ${2:"%Y-%m-%d %H:%M:%S%Q"}]$0'

@@ -1,0 +1,4 @@
+'.source.logic':
+  'Flag a predicate as a constructor':
+    'prefix': 'constructor'
+    'body': 'lang:constructor(`${1:predicateName}).$0'

@@ -1,0 +1,58 @@
+".source.logicblox":
+  addBlock:
+    prefix: "add"
+    body: '''
+      addBlock --blockName ${1:name} <doc>
+         $0
+      </doc>
+    '''
+  "exec stored":
+    prefix: "execStored"
+    body: '''
+      exec --storedBlock ${1:name}
+      $0
+    '''
+  exec:
+    prefix: "exec"
+    body: '''
+      exec --blockName ${1:name} <doc>
+         $0
+      </doc>
+    '''
+  "execRetry stored":
+    prefix: "execRetryStored"
+    body: '''
+      execRetry --storedBlock ${1:name}
+      $0
+    '''
+  execRetry:
+    prefix: "execRetry"
+    body: '''
+      execRetry --blockName ${1:name} <doc>
+         $0
+      </doc>
+    '''
+  "lang:autoNumbered":
+    prefix: "auto"
+    body: "lang:autoNumbered(\\`${1:predicateName}).$0"
+  "lang:block:predicateLifetime":
+    prefix: "lifetime"
+    body: "lang:block:predicateLifetime[] = \"${1:TransactionLifetime}\".$0"
+  "lang:pulse":
+    prefix: "pulse"
+    body: "lang:pulse(\\`${1:predicateName}).$0"
+  query:
+    prefix: "query"
+    body: '''
+      query --blockName ${1:name} <doc>
+         $0
+      </doc>
+    '''
+  "transaction…commit":
+    prefix: "tr"
+    body: '''
+      transaction
+      $0
+      commit
+      
+    '''

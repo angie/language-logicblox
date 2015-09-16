@@ -1,0 +1,4 @@
+'.source.logic':
+  'Create a new datetime':
+    'prefix': 'datetime:create'
+    'body': '${1:newDatetime} = datetime:create[\n    ${2:year},\n    ${3:month},\n    ${4:day},\n    ${5:hour},\n    ${6:minute},\n    ${7:second}\n]$0'

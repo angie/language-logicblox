@@ -1,0 +1,4 @@
+'.source.logic':
+  'string:substring built-in':
+    'prefix': 'string:substring'
+    'body': 'string:substring[${1:string}, ${2:start_position}, ${3:length}]$0'

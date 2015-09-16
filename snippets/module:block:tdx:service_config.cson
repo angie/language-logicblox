@@ -1,0 +1,4 @@
+'.source.logic':
+  'Create a new tdx service config block':
+    'prefix': 'block_tdx_service_config'
+    'body': 'block(`${1:service_config}) {\n\n  alias_all(`lb:web:config:service),\n  alias_all(`lb:web:config:service_abbr),\n  alias_all(`lb:web:config:delim),\n  alias_all(`lb:web:delim:binding),\n\n  clauses(`{\n\n    service_by_group["${2:/prefix}/${3:file}.csv", "lb:web:internal"] = x,\n    delim_service(x) {\n      delim_file_binding[] = "${3:file}"\n    }.\n    service_by_group["${2:/prefix}/${3:file}.csv", "lb:web:public"] = x,\n    delim_service(x) {\n      delim_file_binding[] = "${3:file}",\n\n      auth_realm[] = "${4:intraday}"\n    }.\n    \n  })\n\n} <-- .'

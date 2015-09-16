@@ -1,0 +1,4 @@
+'.source.logic':
+  'Flag a predicate as a derived only':
+    'prefix': 'derived'
+    'body': 'lang:derivationType[`${1:predicateName}] = "Derived".$0'

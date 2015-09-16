@@ -1,0 +1,4 @@
+'.source.logic':
+  'Add a new total aggregation.':
+    'prefix': 'total'
+    'body': '${1:head}[${2:a, b}] = total <-\n\tagg<< total = total(v) >>\n\t${3:body[a, b, _] = v}.$0'

@@ -1,0 +1,4 @@
+'.source.logic':
+  'Add a new entity type predicate':
+    'prefix': 'entity'
+    'body': '${1:entity}(a), ${1:entity}_id(a:id) -> ${2:type}(id).$0'

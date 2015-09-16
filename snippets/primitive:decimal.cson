@@ -1,0 +1,4 @@
+'.source.logic':
+  'primative decimal':
+    'prefix': 'decimal'
+    'body': 'decimal$0'

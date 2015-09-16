@@ -1,0 +1,4 @@
+'.source.logic':
+  'Add a new max aggregation.':
+    'prefix': 'max'
+    'body': '${1:head}[${2:a, b}] = max <-\n\tagg<< max = max(v) >>\n\t${3:body[a, b, _] = v}.$0'

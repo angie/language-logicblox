@@ -1,0 +1,4 @@
+'.source.logic':
+  'Add a new count aggregation.':
+    'prefix': 'count'
+    'body': '${1:head}[${2:a, b}] = count <-\n\tagg<< count = count() >>\n\t${3:body(a, b, _)}.$0'

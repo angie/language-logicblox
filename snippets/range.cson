@@ -1,0 +1,4 @@
+'.source.logic':
+  'range built-in':
+    'prefix': 'range'
+    'body': '${1:num_type}:range(${2:start}, ${3:end}, ${4:stride}, ${5:x})$0'

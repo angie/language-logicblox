@@ -1,0 +1,4 @@
+'.source.logic':
+  'Create a new clause section using module syntax':
+    'prefix': 'clauses'
+    'body': 'clauses(`{\n\t$1\n})${2:,}'

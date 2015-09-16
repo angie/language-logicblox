@@ -1,0 +1,4 @@
+'.source.logic':
+  'Create a new export section using module syntax':
+    'prefix': 'export'
+    'body': 'export(`{\n\t$1\n})${2:,}'

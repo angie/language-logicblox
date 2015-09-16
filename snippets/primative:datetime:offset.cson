@@ -1,0 +1,4 @@
+'.source.logic':
+  'Offset a datetime by a number of units':
+    'prefix': 'datetime:offset'
+    'body': '${1:offsetDatetime} = datetime:offset[${2:inputDatetime}, ${3:offset}, "${4:days}"]$0'

@@ -1,0 +1,4 @@
+'.source.logic':
+  'Alias all the predicates in a block':
+    'prefix': 'alias_all'
+    'body': 'alias_all(`${1:block_name}),'

@@ -1,0 +1,4 @@
+'.source.logic':
+  'Add a new min aggregation.':
+    'prefix': 'min'
+    'body': '${1:head}[${2:a, b}] = min <-\n\tagg<< min = min(v) >>\n\t${3:body[a, b, _] = v}.$0'
