@@ -1,14 +1,12 @@
 {
   "name": "language-logicblox",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Syntax highlighting for LogicBlox / LogiQL",
-  "keywords": [
-  ],
+  "keywords": [],
   "repository": "https://github.com/angie/language-logicblox",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
