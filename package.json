@@ -3,10 +3,33 @@
   "version": "0.1.0",
   "description": "Syntax highlighting for LogicBlox / LogiQL",
   "keywords": [],
-  "repository": "https://github.com/angie/language-logicblox",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angie/language-logicblox.git"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "readme": "# language-logicblox package\n\nSyntax highlighting for LogicBlox / LogiQL.\n\nPorted from the LogicBlox.tmBundle",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/angie/language-logicblox/issues"
+  },
+  "homepage": "https://github.com/angie/language-logicblox#readme",
+  "_id": "language-logicblox@0.1.0",
+  "_shasum": "8101993d1e02adf3c36e0983088b4ff72b84e4a6",
+  "_resolved": "file:../d-115817-4860-zfe0du/package.tgz",
+  "_from": "../d-115817-4860-zfe0du/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }
