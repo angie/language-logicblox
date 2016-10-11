@@ -1,0 +1,4 @@
+'.source.logic':
+  'Flag a predicate to have a given default value':
+    'prefix': 'defaultValue'
+    'body': 'lang:defaultValue[`${1:predicateName}] = ${2:""}.$0'
