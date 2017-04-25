@@ -1,0 +1,10 @@
+'.source.logic':
+  'Add a new sorted sequence (ascending).':
+    'prefix': 'sequence'
+    'body': '${1:sorted}(${2:grp, grp_indx; v1, v2})\n\t<-\n\tseq<<>> single_atom_body(${3:grp, v1, v2)}.$0'
+  'Add a new ascending sorted sequence.':
+    'prefix': 'ascending'
+    'body': '${1:ascending}(${2:grp, grp_indx; v1, v2})\n\t<-\n\tseq<<>> single_atom_body(${3:grp, v1, v2)}.$0'
+  'Add a new descending sorted sequence.':
+    'prefix': 'descending'
+    'body': '${1:descending}(${2:grp, grp_indx; -1 * int_val, -1d * decimal_v})\n\t<-\n\tseq<<>> single_atom_body(${3:grp, int_val, decimal_v)}.$0'

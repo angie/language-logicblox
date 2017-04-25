@@ -1,0 +1,4 @@
+'.source.logic':
+  'Make this block Inactive.':
+    'prefix': 'inactive'
+    'body': 'inactive(),'

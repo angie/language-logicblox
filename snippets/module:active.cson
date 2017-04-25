@@ -1,0 +1,4 @@
+'.source.logic':
+  'Make this block Active (default).':
+    'prefix': 'active'
+    'body': 'active(),'
